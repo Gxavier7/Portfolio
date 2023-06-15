@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.active .start {
+  gap: 12rem;
+  opacity: 1;
+  width: 100%;
+  font-size: 2rem;
+  min-height: 100vh;
+  color: #78acff;
+  flex-direction: column;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.active .start .text-start {
+  text-align: center;
+  letter-spacing: 5px;
+}
+.active .start .text-start .text-reveal1 {
+  overflow: hidden;
+  position: relative;
+}
+.active .start .text-start .text-reveal1::after {
+  animation: text-reveal 3s ease forwards;
+  background: #333333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.active .start .text-start .text-reveal1 p {
+  opacity: 0;
+  animation: fade 1ms 1s forwards;
+}
+.active .start .text-start .text-reveal2 {
+  overflow: hidden;
+  position: relative;
+}
+.active .start .text-start .text-reveal2::after {
+  animation: text-reveal 3s ease forwards;
+  animation-delay: 1.5s;
+  background: #333333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.active .start .text-start .text-reveal2 p {
+  opacity: 0;
+  animation: fade 1ms 1s forwards;
+  animation-delay: 2.5s;
+}
+.active .start .text-start .text-reveal3 {
+  overflow: hidden;
+  position: relative;
+}
+.active .start .text-start .text-reveal3::after {
+  animation: text-reveal 3s ease forwards;
+  animation-delay: 2.5s;
+  background: #333333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.active .start .text-start .text-reveal3 p {
+  opacity: 0;
+  animation: fade 1ms 1s forwards;
+  animation-delay: 3.5s;
+}
+@keyframes text-reveal {
+  from {
+    transform: translateX(-101%);
+  }
+  to {
+    transform: translateX(101%);
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+.active .start .icon {
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: arrow-bouncing 1s ease-in alternate infinite;
+  animation-delay: 5s;
+}
+@keyframes arrow-bouncing {
+  to {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+}
+
+.disactive .start {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
